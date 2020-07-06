@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Home.css";
 import Luggage from "./../../assets/img/luggage.jpg";
+import {Link} from 'react-router-dom';
 
  const Home = () => {
     return (
@@ -11,7 +12,7 @@ import Luggage from "./../../assets/img/luggage.jpg";
           <h1 className='Title'>
             Thoughtful standards for modern travel
           </h1>
-            <button className='Btn'>shop now</button>
+            <button className='Btn'><Link to='/Products'>shop now</Link></button>
         </div>
       </div>
     );
