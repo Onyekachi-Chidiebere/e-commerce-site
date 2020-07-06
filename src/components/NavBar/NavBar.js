@@ -1,13 +1,17 @@
-import React, { Component } from "react";
-import classes from "./Home.css";
-import Luggage from "./../../assets/img/luggage.jpg";
+import React from "react";
 import { NavLink } from "react-router-dom";
+import Logo from "../../assets/img/logo.png";
+import './NavBar.css'
 
- const NavBar = () => {
-    return (
-      <div className={classes.Container}>
-       
+const NavBar = props => (
+  <header className='NavBar'>
+    <nav className='Navigation'>
+      <div className='Logo'>
+        <NavLink to="/">
+          <img src={Logo} />
+        </NavLink>
       </div>
-    );
-  }
+    </nav>
+  </header>
+);
 export default NavBar;
