@@ -4,28 +4,25 @@ import EmptyCart from "./EmptyCart/EmptyCart";
 import CartList from "./CartList/CartList";
 import CartTotals from "./CartTotals/CartTotals"
 import classes from "./Cart.css";
-import { ProductConsumer } from "./../../context";
-export default class Cart extends Component {
-  render() {
+const Cart =(props)=> {
     return (
       <div>
-        <ProductConsumer>
-          {value => {
-            const { cart } = value;
-            if (cart.length > 0) {
-              return (
-                <div className={classes.Container}>
-                  <Title name="Your Cart" />
-                  <CartList value={value} />
-                  <CartTotals value={value} history={this.props.history}/>
-                </div>
-              );
-            } else {
-              return <EmptyCart />;
-            }
-          }}
-        </ProductConsumer>
+        <table>
+          <thead>
+            <th>photo</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+          </thead>
+          {props.cart.map((product)=>(
+            <tr>
+              <td><img src={product.image}/></td>
+              <td>{product.name}</td>
+              <td>{product.price}</td>
+              {/* <td>{product.quantity}</td> */}
+            </tr>
+          ))}
+        </table>
       </div>
     );
-  }
 }

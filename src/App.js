@@ -4,9 +4,11 @@ import './App.css';
 import Home from './components/Home/Home';
 import Products from './components/Product/Product';
 import NavBar from './components/NavBar/NavBar'
+import store from './redux/redux';
+import {Provider} from 'react-redux';
 import {BrowserRouter as Router,Route, Switch} from 'react-router-dom';
 
-const App =()=>{
+const AppContainer =()=>{
   return (
     <Router>
       <div>
@@ -19,6 +21,14 @@ const App =()=>{
       </div>
     </Router>
   );
+};
+
+const App = ()=>{
+  return(
+    <Provider store={store}>
+      <AppContainer/>
+    </Provider>
+  )
 }
 
 export default App;

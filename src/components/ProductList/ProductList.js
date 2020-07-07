@@ -28,10 +28,9 @@ const Products = [
   {id:'111',category:'watch',title:'Apple',price:'1000',image:applewatch},
   {id:'112',category:'watch',title:'Apple-white',price:'750',image:applewatchwhite},
   {id:'113',category:'watch',title:'chain watch',price:'1200',image:chainwatch},
-  {id:'114',category:'watch',title:'Polo',price:'800',image:polo},
-  {id:'1112',category:'shoes',title:'sneakers white',price:'1750',image:sneakerswhite},
-  {id:'1113',category:'shoes',title:'Sneakers Black',price:'1200',image:sneakersblack},
-  {id:'1114',category:'shoes',title:'Sneakers Arsh',price:'1800',image:sneakersarsh},
+  {id:'1112',category:'shoe',title:'sneakers white',price:'1750',image:sneakerswhite},
+  {id:'1113',category:'shoe',title:'Sneakers Black',price:'1200',image:sneakersblack},
+  {id:'1114',category:'shoe',title:'Sneakers Arsh',price:'1800',image:sneakersarsh},
 ];
 
 export default Products;

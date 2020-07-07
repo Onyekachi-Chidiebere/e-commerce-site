@@ -5,7 +5,8 @@ import {Link} from 'react-router-dom';
 
  const Home = () => {
     return (
-      <div className='Container'>
+      <div className='container-body'>
+        <div className='Container'>
         <img src={Luggage} alt="home" className='Img' />
         <div className='Overlay' />
         <div className='Headding'>
@@ -14,6 +15,7 @@ import {Link} from 'react-router-dom';
           </h1>
             <button className='Btn'><Link to='/Products'>shop now</Link></button>
         </div>
+      </div>
       </div>
     );
   }

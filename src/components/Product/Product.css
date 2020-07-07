@@ -1,9 +1,15 @@
-
-.Card {
+.container {
   width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  grid-template-rows: auto auto 4em;
+  margin:50px auto;
+  justify-content: center
+}
+.Card {
+  width: 30%;
   background-color: #fff;
   display: grid;
-  grid-template-rows: auto auto 4em;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
   border-radius: 2px;
 }
