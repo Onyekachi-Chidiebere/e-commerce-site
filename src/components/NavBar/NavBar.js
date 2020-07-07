@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import Logo from "../../assets/img/logo.png";
 import {ShoppingCart} from '@material-ui/icons'
 import store,{categorizeProduct} from './../../redux/redux';
@@ -38,7 +38,7 @@ const handleCategorize =(cat)=>{
       </select>
       <span><input placeholder='Search'/><button>search</button></span>
       <div id='cart-container'>
-        <ShoppingCart className='icon'/>
+        <Link to='/cart'><ShoppingCart className='icon'/></Link>
         <span className='number'>{props.cart.length}</span>
       </div>
       </div>

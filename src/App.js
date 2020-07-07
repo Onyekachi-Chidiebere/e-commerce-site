@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home/Home';
+import Cart from './components/Cart/Cart';
 import Products from './components/Product/Product';
 import NavBar from './components/NavBar/NavBar'
 import store from './redux/redux';
@@ -16,6 +17,7 @@ const AppContainer =()=>{
       <Switch>
         <Route path='/' component={Home} exact/>
         <Route path='/products' component={Products} />
+        <Route path='/cart' component={Cart} />
         <Route component={Error}/>
       </Switch>
       </div>

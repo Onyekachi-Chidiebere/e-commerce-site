@@ -8,7 +8,15 @@ const DEFAULT_STATE = {ProductList,cart:[]};
 
 const cartReducer = (state=[],action)=>{
     if(action.type === ADD_TO_CART){
-        return [...state,action.payload]
+        state.forEach((product)=>{
+            if(product.id===action.payload.id){
+                action.payload=false
+                return product.quantity++
+            }
+        })
+        if(action.payload){
+            return [...state,action.payload]
+        }
     }
     return state;
 }
@@ -37,7 +45,7 @@ export const categorizeProduct = category =>({
 })
 export const addToCart = product =>({
     type:ADD_TO_CART,
-    payload:product
+    payload:{...product,quantity:1}
 })
 
 const store = createStore(reducer,DEFAULT_STATE);

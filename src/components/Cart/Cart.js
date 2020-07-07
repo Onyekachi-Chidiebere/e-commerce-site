@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-import Title from "./../Title/Title";
-import EmptyCart from "./EmptyCart/EmptyCart";
-import CartList from "./CartList/CartList";
-import CartTotals from "./CartTotals/CartTotals"
-import classes from "./Cart.css";
+import {connect} from 'react-redux';
 const Cart =(props)=> {
     return (
       <div>
@@ -17,12 +13,16 @@ const Cart =(props)=> {
           {props.cart.map((product)=>(
             <tr>
               <td><img src={product.image}/></td>
-              <td>{product.name}</td>
+              <td>{product.title}</td>
               <td>{product.price}</td>
-              {/* <td>{product.quantity}</td> */}
+              <td>{product.quantity}</td>
             </tr>
           ))}
         </table>
       </div>
     );
 }
+const mapStateToProp = state =>({
+  cart:state.cart
+})
+export default connect(mapStateToProp)(Cart) ;
