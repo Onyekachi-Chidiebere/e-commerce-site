@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import store,{removeFromCart} from './../../redux/redux';
 import {connect} from 'react-redux';
+import './Cart.css'
 const Cart =(props)=> {
   const handleDeleteProduct=(product)=>{
     console.log('from client')
@@ -12,29 +13,34 @@ const Cart =(props)=> {
      price+=product.quantity*product.price
     })
     return (
-      <div>
+      <div id='container'>
         <table>
           <thead>
-            <th>photo</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Total</th>
-            <th>Remove</th>
+            <tr>
+              <th></th>
+              <th>PRODUCT</th>
+              <th>PRICE</th>
+              <th>QUANTITY</th>
+              <th>TOTAL</th>
+              <th></th>
+            </tr>
           </thead>
+          <tbody>
           {props.cart.map((product)=>(
             <tr key={product.id}>
-              <td><img src={product.image}/></td>
+              <td><div className='img'><img src={product.image}/></div></td>
               <td>{product.title}</td>
               <td>{`$${product.price}`}</td>
               <td>{product.quantity}</td>
               <td>{`$${product.quantity*product.price}`}
               </td>
               <td>
-                <button onClick={()=>{handleDeleteProduct(product)}}>Remove</button>
+                <button onClick={()=>{handleDeleteProduct(product)}}>X</button>
               </td>
             </tr>
           ))}
+          </tbody>
+          
         </table>
         <div>{`$${price}`}</div>
       </div>

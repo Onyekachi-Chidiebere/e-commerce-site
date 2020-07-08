@@ -1,9 +1,17 @@
-.Container {
+#container {
     margin: 5rem 2rem 2rem 2rem;
-    background-color: #ffffff;
+    background-color: #cec5c5;
     height: 100%;
   }
-
+table{
+    background-color: #ffffff;
+    width:90%;
+    margin:10px auto;
+}
+.img{
+  width:auto;
+  height: 50px;
+}
   @media only screen and (max-width:569px){
     .Container{
       margin: 5rem 0 0 0;
