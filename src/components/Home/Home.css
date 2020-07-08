@@ -1,21 +1,25 @@
 .Container {
-  margin: 5rem 2rem 2rem 2rem;
-  background: #ffffff;
-  height: 100%;
+  margin-top: 5rem;
+  background:#ffffff;
   position: relative;
+  width:100%;
 }
+
 .Overlay{
   position: absolute; 
   top:0;
   background: rgba(0, 0, 0, 0.4); 
   z-index: 200;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
 }
 .Img {
-  width: 100%; 
+  background-image: url('./../../assets/img/luggage.jpg');
+  width:100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 80vh;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 .Headding {
   position: absolute;
@@ -24,7 +28,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 40%;
+  /* width: 40%; */
   z-index: 300;
 }
 .Title {
@@ -34,10 +38,15 @@
   font-weight: normal;
   margin: 2rem;
 }
-@media only screen and (max-width:470px){
+@media (max-width:400px){
   .Title {
     margin:1rem;
     font-size: 2rem;
+  }
+  .Headding{
+    align-self: center;
+    right: 15%;
+
   }
 }
 
@@ -46,13 +55,15 @@
   color: #ffffff;
   border: 2px solid #ffffff;
   width: 10rem;
-  padding: 0.5rem 0.5rem;
+  /* padding: 0.5rem 0.5rem; */
   text-transform: uppercase;
   font-size: 1rem;
   background: transparent;
   transition-duration: 0.4s;
   cursor: pointer;
   outline: none;
+  text-decoration: none;
+  text-align: center;
 }
 .Btn:hover {
   background: #ffffff;

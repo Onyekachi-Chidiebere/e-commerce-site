@@ -1,5 +1,6 @@
 import React, { useState,useEffect,Component } from "react";
 import './Product.css'
+import { Link } from "react-router-dom";
 import store,{addToCart} from './../../redux/redux';
 import {connect} from 'react-redux';
 
@@ -11,6 +12,7 @@ import {connect} from 'react-redux';
  
     return (
       <div className='container'>
+        <Link to='/cart' className='checkout'>Check Out</Link>
         {props.ProductList.map((product)=>(
             <span className='Card'>
             <div className='ImgContainer'>

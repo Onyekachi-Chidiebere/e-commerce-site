@@ -16,7 +16,8 @@
   justify-content: space-between;
 }
 .menu{
-  display:flex
+  display:flex;
+  justify-content: space-evenly;
 }
 .Logo {
   margin-left: 0.5rem;
@@ -32,8 +33,17 @@
 .icon{
   color:blue
 }
-@media (min-width: 769px) {
-  .ToggleButton {
+@media (max-width: 400px) {
+  .Navigation{
+    flex-direction: column;
+    width:100%;
+    align-items:center;
+    padding:0
+  }
+ .ToggleButton {
     display: none;
+  }
+  .menu{
+    width:100%;
   }
 }

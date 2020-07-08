@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import store,{removeFromCart} from './../../redux/redux';
+import {DeleteForever} from '@material-ui/icons'
 import {connect} from 'react-redux';
 import './Cart.css'
 const Cart =(props)=> {
@@ -17,7 +18,7 @@ const Cart =(props)=> {
         <table>
           <thead>
             <tr>
-              <th></th>
+              <th>{`GRAND TOTAL $${price}`}</th>
               <th>PRODUCT</th>
               <th>PRICE</th>
               <th>QUANTITY</th>
@@ -28,21 +29,22 @@ const Cart =(props)=> {
           <tbody>
           {props.cart.map((product)=>(
             <tr key={product.id}>
-              <td><div className='img'><img src={product.image}/></div></td>
-              <td>{product.title}</td>
-              <td>{`$${product.price}`}</td>
-              <td>{product.quantity}</td>
-              <td>{`$${product.quantity*product.price}`}
+              <td className='card'>
+                <img className='img' src={product.image}/>
+              </td>
+              <td className='card'>{product.title}</td>
+              <td className='card'>{`$${product.price}`}</td>
+              <td className='card'>{product.quantity}</td>
+              <td className='card'>{`$${product.quantity*product.price}`}
               </td>
               <td>
-                <button onClick={()=>{handleDeleteProduct(product)}}>X</button>
+              <DeleteForever className='del' onClick={()=>{handleDeleteProduct(product)}}/>
               </td>
             </tr>
           ))}
           </tbody>
           
         </table>
-        <div>{`$${price}`}</div>
       </div>
     );
 }

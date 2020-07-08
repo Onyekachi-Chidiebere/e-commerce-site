@@ -5,18 +5,16 @@ import {Link} from 'react-router-dom';
 
  const Home = () => {
     return (
-      <div className='container-body'>
         <div className='Container'>
-        <img src={Luggage} alt="home" className='Img' />
-        <div className='Overlay' />
+        <div  className='Img' />
+           <div className='Overlay' />
         <div className='Headding'>
-          <h1 className='Title'>
-            Thoughtful standards for modern travel
-          </h1>
-            <button className='Btn'><Link to='/Products'>shop now</Link></button>
+            <h1 className='Title'>
+              Thoughtful standards for modern travel
+            </h1>
+            <Link className='Btn' to='/Products'>shop now</Link>    
+          </div>
         </div>
-      </div>
-      </div>
     );
   }
 export default Home;

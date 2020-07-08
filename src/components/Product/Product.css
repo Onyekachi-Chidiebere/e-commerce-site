@@ -31,6 +31,17 @@
   margin-left: auto;
   margin-top: 1rem;
 }
+.checkout{
+  position:fixed;
+  top:85vh;
+  left:85%;
+  background:#414141;
+  padding:10px;
+  border-radius: 25px;
+  color:white;
+  font-weight: bold;
+  text-decoration: none;
+}
 .Title {
   color: #00344b;
   text-align: center;
@@ -76,4 +87,16 @@
   font-size: 1rem;
   opacity: 0.6;
   cursor: not-allowed;
+}
+@media only screen and (max-width:569px){
+  .container{
+    flex-direction: column;
+    align-content: center;
+  }
+  .Card{
+    width:100%
+  }
+  .checkout{
+    left:70vw
+  }
 }

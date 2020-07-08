@@ -1,19 +1,43 @@
 #container {
-    margin: 5rem 2rem 2rem 2rem;
-    background-color: #cec5c5;
-    height: 100%;
+    margin: 5rem 0;
+    background-color: #ffffff;
+    width: 100%;
   }
 table{
     background-color: #ffffff;
     width:90%;
     margin:10px auto;
+    border-collapse: collapse;
+}
+td{
+  border:1px solid black;
+  text-align: center;
+  height: 100px;
+}
+tr{
+  width:40%;
+  margin:0 auto;
+  text-justify: center;
+}
+.card{
+  height: 50px;
+  width:10%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .img{
-  width:auto;
-  height: 50px;
+  width:100%;
+}
+.grand-total{
+  margin-left:60%;
+  background-color: green;
 }
   @media only screen and (max-width:569px){
-    .Container{
-      margin: 5rem 0 0 0;
+    td{
+      height: 70px;
+    }
+    th{
+      font-size: 10px;
     }
   }
