@@ -1,6 +1,5 @@
 import React, { useState,useEffect,Component } from "react";
 import './Product.css'
-// import ProductList from '../ProductList/ProductList'
 import store,{addToCart} from './../../redux/redux';
 import {connect} from 'react-redux';
 
